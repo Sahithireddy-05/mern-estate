@@ -5,9 +5,11 @@ import About from "./pages/About";
 import Profile from "./pages/Profile";
 import Signin from "./pages/Signin";
 import SignUp from "./pages/Signup";
-
+import Header from "./components/Header";
 function App() {
   return (
+    <>
+    <Header/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -15,6 +17,7 @@ function App() {
       <Route path="/sign-in" element={<Signin />} />
       <Route path="/sign-up" element={<SignUp />} />
     </Routes>
+    </>
   );
 }
 
