@@ -1,9 +1,21 @@
-import React from 'react'
+import { Routes, Route } from "react-router-dom";
+import React from "react";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Profile from "./pages/Profile";
+import Signin from "./pages/Signin";
+import SignUp from "./pages/Signup";
 
 function App() {
   return (
-    <h1 className="text-red-600">App</h1>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/sign-in" element={<Signin />} />
+      <Route path="/sign-up" element={<SignUp />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
